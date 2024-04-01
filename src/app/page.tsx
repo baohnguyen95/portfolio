@@ -23,7 +23,7 @@ export default function Home() {
         </span>
       </div>
       <div className="flex flex-col mt-6 space-y-5">
-        <span className="font-bold">Feature Projects</span>
+        <span className="font-bold">Featured Projects</span>
         <div className="flex flex-col space-y-2">
           {CONFIG.projects.map((project,idx) => {
             return (
