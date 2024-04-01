@@ -9,7 +9,7 @@ type Metadata = {
   featured?: string;
   tag?: string;
   isDraft?:string;
-};
+}; // every blog post must include meta data
 
 function parseFrontmatter(fileContent: string) {
   let frontmatterRegex = /---\s*([\s\S]*?)\s*---/;
@@ -52,5 +52,5 @@ function getMDXData(dir: any) {
 }
 
 export function getPosts() {
-  return getMDXData(path.join(process.cwd(), 'src/content'));
+  return getMDXData(path.join(process.cwd(), 'src/content')); // getPosts will return an array of objects, each object include {metadata, slug, content}
 }
